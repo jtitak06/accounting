@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajabu Accounting</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="navbar-content">
+        <a href="#home" class="logo">
+            <span class="icon-fish">🐟</span>
+        </a>
+        <div class="nav-link-wrapper">
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#benefits">Benefits</a>
+            <a class="nav-link" href="#services">Services</a>
+            <a class="nav-link" href="#contact">Contact</a>
+        </div>
+        <button id="menu-button" class="menu-icon" aria-label="Toggle menu" onclick="toggleMobileMenu()">
+            <span class="icon-menu">☰</span>
+        </button>
+    </div>
+</nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+    <div>
+        <ul class="mobile-menu-link-wrapper">
+            <li><a class="mobile-menu-link" href="#about" onclick="toggleMobileMenu()">About</a></li>
+            <li><a class="mobile-menu-link" href="#benefits" onclick="toggleMobileMenu()">Benefits</a></li>
+            <li><a class="mobile-menu-link" href="#services" onclick="toggleMobileMenu()">Services</a></li>
+            <li><a class="mobile-menu-link" href="#contact" onclick="toggleMobileMenu()">Contact</a></li>
+        </ul>
+    </div>
+  </div>
+  <main class="privacy-policy">
+    <h1 class="privacy-policy__title">Terms of Use</h1>
+    <p class="privacy-policy__intro">Welcome to Ajabu Accounting! By accessing or using this website (the “Site”), you agree to comply with and be bound by the following terms and conditions. Please read this Terms of Use policy carefully before using our services. If you do not agree with any part of these terms, you must not use our Site.</p>
+    
+    <section class="privacy-policy__section">
+        <h2 class="privacy-policy__section-title">1. Acceptance of Terms</h2>
+        <p class="privacy-policy__section-text">By accessing or using the Site, you agree to be bound by these Terms of Use and our Privacy Policy, which can be found on the Site. If you do not agree with these terms, please discontinue use of the Site.</p>
+    </section>
+    
+    <section class="privacy-policy__section">
+        <h2 class="privacy-policy__section-title">2. Changes to the Terms</h2>
+        <p class="privacy-policy__section-text">We may update or revise these Terms of Use at any time. When we make changes, the updated Terms will be posted on this page with a new effective date. We encourage you to review these Terms periodically to stay informed of any changes.</p>
+    </section>
+    
+    <section class="privacy-policy__section">
+        <h2 class="privacy-policy__section-title">3. Use of the Site</h2>
+        <p class="privacy-policy__section-text">You agree to use the Site for lawful purposes only. You must not use the Site:</p>
+        <ul class="privacy-policy__list">
+            <li class="privacy-policy__list-item">In any way that violates any applicable local, state, national, or international law.</li>
+            <li class="privacy-policy__list-item">To transmit or send unsolicited promotional material (spam).</li>
+            <li class="privacy-policy__list-item">To introduce harmful viruses or malicious code to the Site.</li>
+        </ul>
+        <p class="privacy-policy__section-text">We reserve the right to suspend or terminate your access to the Site at our discretion for any violation of these terms.</p>
+    </section>
+    
+    <section class="privacy-policy__section">
+        <h2 class="privacy-policy__section-title">4. Services Provided</h2>
+        <p class="privacy-policy__section-text">Ajabu Accounting offers accounting and bookkeeping services as detailed on the Site. These services are provided subject to the terms and conditions outlined here and may require separate agreements or contracts.</p>
+    </section>
+    
+    <section class="privacy-policy__section">
+        <h2 class="privacy-policy__section-title">5. Account Registration and Security</h2>
+        <p class="privacy-policy__section-text">In order to access certain services, you may need to register an account on the Site. You agree to provide accurate and complete information during the registration process and keep your account details up to date.</p>
+        <p class="privacy-policy__section-text">You are responsible for maintaining the confidentiality of your account information and for any activities that occur under your account. If you believe that your account has been compromised, you agree to notify us immediately.</p>
+    </section>
+    
+    <section class="privacy-policy__section">
+        <h2 class="privacy-policy__section-title">6. Intellectual Property</h2>
+        <p class="privacy-policy__section-text">All content on the Site, including but not limited to text, graphics, logos, images, and software, is the property of Ajabu Accounting or its licensors and is protected by copyright and intellectual property laws. You may not use, reproduce, or distribute any content from the Site without our prior written consent.</p>
+    </section>
+    
+    <section class="privacy-policy__section">
+        <h2 class="privacy-policy__section-title">7. Disclaimers</h2>
+        <p class="privacy-policy__section-text">Ajabu Accounting makes no representations or warranties regarding the accuracy, completeness, or reliability of the content on the Site. The Site and services are provided “as is” and “as available” without any warranties of any kind, either express or implied.</p>
+        <p class="privacy-policy__section-text">We do not guarantee that the Site will be uninterrupted or free of errors, bugs, or viruses. You use the Site at your own risk.</p>
+    </section>
+    
+    <section class="privacy-policy__section">
+        <h2 class="privacy-policy__section-title">8. Limitation of Liability</h2>
+        <p class="privacy-policy__section-text">To the fullest extent permitted by law, Ajabu Accounting will not be liable for any indirect, incidental, special, or consequential damages arising out of or in connection with your use of the Site or services, including but not limited to lost profits, business interruption, or data loss.</p>
+    </section>
+    
+    <section class="privacy-policy__section">
+        <h2 class="privacy-policy__section-title">9. Indemnification</h2>
+        <p class="privacy-policy__section-text">You agree to indemnify and hold harmless Ajabu Accounting, its employees, agents, and affiliates from any claims, losses, damages, liabilities, or expenses (including legal fees) arising out of or related to your use of the Site, violation of these Terms of Use, or infringement of any rights of third parties.</p>
+    </section>
+    
+    <section class="privacy-policy__section">
+        <h2 class="privacy-policy__section-title">10. Links to Third-Party Websites</h2>
+        <p class="privacy-policy__section-text">The Site may contain links to third-party websites that are not operated or controlled by Ajabu Accounting. We are not responsible for the content or practices of third-party websites and recommend that you review their terms and privacy policies.</p>
+    </section>
+    
+    <section class="privacy-policy__section">
+        <h2 class="privacy-policy__section-title">11. Termination</h2>
+        <p class="privacy-policy__section-text">We reserve the right to suspend or terminate your access to the Site at any time, for any reason, without prior notice. Upon termination, your right to access and use the Site will immediately cease.</p>
+    </section>
+    
+    <section class="privacy-policy__section">
+        <h2 class="privacy-policy__section-title">12. Governing Law</h2>
+        <p class="privacy-policy__section-text">These Terms of Use are governed by the laws of the state or jurisdiction in which Ajabu Accounting operates, without regard to its conflict of law principles. Any disputes arising from these terms will be resolved in the appropriate courts within that jurisdiction.</p>
+    </section>
+    
+    <section class="privacy-policy__section">
+        <h2 class="privacy-policy__section-title">13. Contact Us</h2>
+        <p class="privacy-policy__section-text">If you have any questions or concerns about these Terms of Use, please contact us at:</p>
+        <h3 class="privacy-policy__contact-title">Ajabu Accounting</h3>
+        <p class="privacy-policy__contact-info">E-mail: jeff@ajabuaccounting.com</p>
+        <p class="privacy-policy__contact-info">Website: https://www.ajabuaccounting.com</p>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <span class="icon-fish">🐟</span>
+            <span>Ajabu Accounting</span>
+        </div>
+        <div class="footer-link-wrapper">
+            <a class="footer-link" href="#about">About</a>
+            <a class="footer-link" href="#benefits">Benefits</a>
+            <a class="footer-link" href="#services">Services</a>
+            <a class="footer-link" href="#contact">Contact</a>
+            <a class="footer-link" href="./privacy-policy.html">Privacy Policy</a>
+            <a class="footer-link" href="./terms-of-use.html">Terms of Use</a>
+        </div>
+        <div class="footer-bottom">
+            <p>© Copyright 2025. Ajabu Accounting. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank">
+                    <img class="social-icon-logo" src="./images/facebook-logo.png" alt="facebook" />
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img class="social-icon-logo" src="./images/instagram-logo.png" alt="instagram" />
+                </a>
+                <a href="https://www.linkedin.com" target="_blank">
+                    <img class="social-icon-logo" src="./images/linkedin-logo.png" alt="linkedin" />
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

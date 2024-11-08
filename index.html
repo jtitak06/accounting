@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajabu Accounting</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="navbar-content">
+        <a href="#home" class="logo">
+            <img class="nav-logo" src="./images/favicon.png" alt="nav-logo" />
+        </a>
+        <div class="nav-link-wrapper">
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#benefits">Benefits</a>
+            <a class="nav-link" href="#services">Services</a>
+            <a class="nav-link" href="#contact">Contact</a>
+        </div>
+        <button id="menu-button" class="menu-icon" aria-label="Toggle menu" onclick="toggleMobileMenu()">
+            <span class="icon-menu">☰</span>
+        </button>
+    </div>
+</nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+    <div>
+        <ul class="mobile-menu-link-wrapper">
+            <li><a class="mobile-menu-link" href="#about" onclick="toggleMobileMenu()">About</a></li>
+            <li><a class="mobile-menu-link" href="#benefits" onclick="toggleMobileMenu()">Benefits</a></li>
+            <li><a class="mobile-menu-link" href="#services" onclick="toggleMobileMenu()">Services</a></li>
+            <li><a class="mobile-menu-link" href="#contact" onclick="toggleMobileMenu()">Contact</a></li>
+        </ul>
+    </div>
+  </div>
+<!-- Hero -->
+ <section class="hero-section" id="home">
+    <div class="hero-image">
+        <img class="hero-logo" src="./images/ajabu-accounting-logo.png" alt="logo" />
+        <div class="hero-title-wrapper">
+            <h1 class="hero-title">Simplify Your Finances, <br />Focus on Growth</h1>
+        </div>
+    </div>
+ </section>
+<!-- About -->
+ <section id="about">
+    <div class="about-wrapper">
+        <div class="about-column">
+            <p class="about-paragraph">"Ajabu" means "amazing" in Swahili, and that’s exactly what we strive to deliver: amazing accounting and
+                bookkeeping services. With transparent pricing and open communication, we’re dedicated to easing your
+                financial stress so you can focus on growing your business with confidence.
+                <p />
+                <br />
+            <p class="about-paragraph">Our founder, Jeff Titak CFP®, is a serial entrepreneur and passionate about enriching business owners with
+                reduced
+                financial stress and a clearer vision for optimal growth. As a Quickbooks certified bookkeeper and
+                accountant, I pride
+                myself on the quality of work and knowledge to be an invaluable resource for the businesses that I partner
+                with.</p>
+        </div>
+        <div class="about-self-wrapper">
+            <img class="self" src="./images/ledge.png" alt="jeff" />
+        </div>
+    </div>
+    <div class="badge-wrapper">
+        <img class="badge" src="./images/intuit-bookkeeping-certification.png" alt="badge" />
+        <img class="badge" src="./images/intuit-bookkeeping-certification.png" alt="badge" />
+        <img class="badge" src="./images/intuit-bookkeeping-certification.png" alt="badge" />
+    </div>
+ </section>
+<!-- Services -->
+ <section id="services">
+
+ </section>
+<!-- Contact -->
+ <section id="contact">
+    <h2 class="contact-title">Contact</h2>
+    <div class="contact-form-wrapper">
+        <form id="contactForm" class="contact-form">
+            <div class="input-wrapper">
+                <label class="label" for="name">Name</label>
+                <input required class="contact-input" type="text" id="name" name="from_name" placeholder="Enter name here..." class="border-gray-600"/>
+            </div>
+            <div class="input-wrapper">
+                <label class="label" for="email">E-mail</label>
+                <input required class="contact-input" type="email" id="email" name="from_email" placeholder="Enter e-mail here..." />
+            </div>
+            <div class="input-wrapper">
+                <label class="label" for="message">Message</label>
+                <textarea required class="contact-textarea" id="message" name="message" placeholder="Type your message here..."></textarea>
+            </div>
+            <div class="contact-button-wrapper">
+                <button class="contact-button" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+ </section>
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <span class="icon-fish">🐟</span>
+            <span>Ajabu Accounting</span>
+        </div>
+        <div class="footer-link-wrapper">
+            <a class="footer-link" href="#about">About</a>
+            <a class="footer-link" href="#benefits">Benefits</a>
+            <a class="footer-link" href="#services">Services</a>
+            <a class="footer-link" href="#contact">Contact</a>
+            <a class="footer-link" href="./privacy-policy.html">Privacy Policy</a>
+            <a class="footer-link" href="./terms-of-use.html">Terms of Use</a>
+        </div>
+        <div class="footer-bottom">
+            <p>© Copyright 2025. Ajabu Accounting. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank">
+                    <img class="social-icon-logo" src="./images/facebook-logo.png" alt="facebook" />
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img class="social-icon-logo" src="./images/instagram-logo.png" alt="instagram" />
+                </a>
+                <a href="https://www.linkedin.com" target="_blank">
+                    <img class="social-icon-logo" src="./images/linkedin-logo.png" alt="linkedin" />
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="script.js"></script>
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function(){
+        emailjs.init("U6tApi-QiEBFxwAZ2"); // Replace with your actual User ID
+    })();
+</script>
+</body>
+</html>

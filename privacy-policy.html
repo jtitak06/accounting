@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajabu Accounting</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="navbar-content">
+        <a href="#home" class="logo">
+            <span class="icon-fish">🐟</span>
+        </a>
+        <div class="nav-link-wrapper">
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#benefits">Benefits</a>
+            <a class="nav-link" href="#services">Services</a>
+            <a class="nav-link" href="#contact">Contact</a>
+        </div>
+        <button id="menu-button" class="menu-icon" aria-label="Toggle menu" onclick="toggleMobileMenu()">
+            <span class="icon-menu">☰</span>
+        </button>
+    </div>
+</nav>
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+    <div>
+        <ul class="mobile-menu-link-wrapper">
+            <li><a class="mobile-menu-link" href="#about" onclick="toggleMobileMenu()">About</a></li>
+            <li><a class="mobile-menu-link" href="#benefits" onclick="toggleMobileMenu()">Benefits</a></li>
+            <li><a class="mobile-menu-link" href="#services" onclick="toggleMobileMenu()">Services</a></li>
+            <li><a class="mobile-menu-link" href="#contact" onclick="toggleMobileMenu()">Contact</a></li>
+        </ul>
+    </div>
+  </div>
+  <main class="privacy-policy">
+    <h1 class="privacy-policy__title">Privacy Policy</h1>
+    <p class="privacy-policy__intro">Ajabu Accounting ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and protect your personal information when you visit our website [insert website URL] (the "Site") and use our services.</p>
+    <p class="privacy-policy__intro">By using our Site or engaging with us for bookkeeping and accounting services, you agree to the terms of this Privacy Policy. Please read it carefully.</p>
+    
+    <section class="privacy-policy__section">
+        <h2 class="privacy-policy__section-title">1. Information We Collect</h2>
+        <p class="privacy-policy__section-text">We collect the following types of information when you use our Site and services:</p>
+        
+        <h3 class="privacy-policy__subheading">Personal Information</h3>
+        <ul class="privacy-policy__list">
+            <li class="privacy-policy__list-item">Name</li>
+            <li class="privacy-policy__list-item">Email address</li>
+            <li class="privacy-policy__list-item">Phone number</li>
+            <li class="privacy-policy__list-item">Business name (if applicable)</li>
+            <li class="privacy-policy__list-item">Billing information (when necessary for our services)</li>
+            <li class="privacy-policy__list-item">Other details you provide when you contact us or request information</li>
+        </ul>
+        
+        <h3 class="privacy-policy__subheading">Non-Personal Information</h3>
+        <ul class="privacy-policy__list">
+            <li class="privacy-policy__list-item">IP address</li>
+            <li class="privacy-policy__list-item">Browser type</li>
+            <li class="privacy-policy__list-item">Device information</li>
+            <li class="privacy-policy__list-item">Usage data (how you interact with our Site)</li>
+        </ul>
+    </section>
+    
+    <section class="privacy-policy__section">
+        <h2 class="privacy-policy__section-title">2. How We Use Your Information</h2>
+        <p class="privacy-policy__section-text">We use the information we collect for the following purposes:</p>
+        <ul class="privacy-policy__list">
+            <li class="privacy-policy__list-item">To provide and improve our accounting services</li>
+            <li class="privacy-policy__list-item">To respond to inquiries and provide customer support</li>
+            <li class="privacy-policy__list-item">To process transactions and send related updates (e.g., invoices, confirmations)</li>
+            <li class="privacy-policy__list-item">To send marketing communications (if you opt-in)</li>
+            <li class="privacy-policy__list-item">To comply with legal obligations</li>
+        </ul>
+    </section>
+    
+    <section class="privacy-policy__section">
+        <h2 class="privacy-policy__section-title">3. Cookies and Tracking Technologies</h2>
+        <p class="privacy-policy__section-text">We use cookies and similar tracking technologies (such as web beacons and analytics tools) to enhance your experience on our Site. Cookies are small files that store certain information about your preferences and activities. You can control the use of cookies through your browser settings, but disabling cookies may impact your ability to use some features of the Site.</p>
+    </section>
+    
+    <section class="privacy-policy__section">
+        <h2 class="privacy-policy__section-title">4. How We Protect Your Information</h2>
+        <p class="privacy-policy__section-text">We use commercially reasonable efforts to protect your personal information from unauthorized access, loss, or misuse. This includes using encryption technology, firewalls, and secure servers. However, no method of transmission over the internet is 100% secure, and we cannot guarantee the absolute security of your information.</p>
+    </section>
+    
+    <section class="privacy-policy__section">
+        <h2 class="privacy-policy__section-title">5. Sharing Your Information</h2>
+        <p class="privacy-policy__section-text">We do not sell or rent your personal information to third parties. We may share your information with trusted service providers who assist us in operating our business, such as:</p>
+        <ul class="privacy-policy__list">
+            <li class="privacy-policy__list-item">Payment processors (for transactions)</li>
+            <li class="privacy-policy__list-item">Email marketing services</li>
+            <li class="privacy-policy__list-item">Web hosting and analytics providers</li>
+        </ul>
+        <p class="privacy-policy__section-text">We require these third parties to protect your information in accordance with our Privacy Policy and applicable laws.</p>
+        <p class="privacy-policy__section-text">We may also disclose your information if required to do so by law or to protect our rights or property.</p>
+    </section>
+    
+    <section class="privacy-policy__section">
+        <h2 class="privacy-policy__section-title">6. Third-Party Links</h2>
+        <p class="privacy-policy__section-text">Our Site may contain links to other websites that are not operated by us. We are not responsible for the privacy practices of these third-party sites. We encourage you to review the privacy policies of any external websites you visit.</p>
+    </section>
+    
+    <section class="privacy-policy__section">
+        <h2 class="privacy-policy__section-title">7. Your Data Protection Rights</h2>
+        <p class="privacy-policy__section-text">Depending on your location, you may have the right to access, update, correct, or delete your personal information. If you wish to exercise any of these rights, please contact us at jeff@ajabuaccounting.com.</p>
+        <p class="privacy-policy__section-text">If you are located in the European Union, you may have additional rights under the GDPR, including the right to request data portability and the right to withdraw consent at any time.</p>
+    </section>
+    
+    <section class="privacy-policy__section">
+        <h2 class="privacy-policy__section-title">8. Data Retention</h2>
+        <p class="privacy-policy__section-text">We will retain your personal information for as long as necessary to fulfill the purposes outlined in this Privacy Policy, comply with legal obligations, and resolve any disputes.</p>
+    </section>
+    
+    <section class="privacy-policy__section">
+        <h2 class="privacy-policy__section-title">9. Children’s Privacy</h2>
+        <p class="privacy-policy__section-text">Our Site and services are not intended for individuals under the age of 18. We do not knowingly collect personal information from children. If we become aware that a child has provided us with personal information, we will take steps to delete such information.</p>
+    </section>
+    
+    <section class="privacy-policy__section">
+        <h2 class="privacy-policy__section-title">10. Changes to This Privacy Policy</h2>
+        <p class="privacy-policy__section-text">We may update this Privacy Policy from time to time. When we make changes, we will revise this page. We encourage you to review this Privacy Policy periodically to stay informed about how we are protecting your information.</p>
+    </section>
+    
+    <section class="privacy-policy__section">
+        <h2 class="privacy-policy__section-title">11. Contact Us</h2>
+        <p class="privacy-policy__section-text">If you have any questions about this Privacy Policy or our data practices, please contact us at:</p>
+        <h3 class="privacy-policy__subheading">Ajabu Accounting</h3>
+        <p class="privacy-policy__section-text">E-mail: jeff@ajabuaccounting.com</p>
+        <p class="privacy-policy__section-text">Website: https://www.ajabuaccounting.com</p>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <span class="icon-fish">🐟</span>
+            <span>Ajabu Accounting</span>
+        </div>
+        <div class="footer-link-wrapper">
+            <a class="footer-link" href="#about">About</a>
+            <a class="footer-link" href="#benefits">Benefits</a>
+            <a class="footer-link" href="#services">Services</a>
+            <a class="footer-link" href="#contact">Contact</a>
+            <a class="footer-link" href="./privacy-policy.html">Privacy Policy</a>
+            <a class="footer-link" href="./terms-of-use.html">Terms of Use</a>
+        </div>
+        <div class="footer-bottom">
+            <p>© Copyright 2025. Ajabu Accounting. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank">
+                    <img class="social-icon-logo" src="./images/facebook-logo.png" alt="facebook" />
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img class="social-icon-logo" src="./images/instagram-logo.png" alt="instagram" />
+                </a>
+                <a href="https://www.linkedin.com" target="_blank">
+                    <img class="social-icon-logo" src="./images/linkedin-logo.png" alt="linkedin" />
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
