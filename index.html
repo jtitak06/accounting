@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajabu Accounting</title>
+    <link rel="icon" href="./images/favicon.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -21,21 +22,33 @@
             <a class="nav-link" href="#contact">Contact</a>
         </div>
         <button id="menu-button" class="menu-icon" aria-label="Toggle menu" onclick="toggleMobileMenu()">
-            <span class="icon-menu">☰</span>
+            <img class="icon-menu" src="./images/hamburger-menu.png" alt="hamburger-menu" />
         </button>
     </div>
 </nav>
 
   <!-- Mobile Menu Overlay -->
   <div class="mobile-menu-overlay" id="mobileMenuOverlay">
-    <div>
+    <div class="mobile-menu-background">
+        <div class="mobile-menu-title-wrapper">
+            <h3 class="mobile-menu-title">Menu</h3>
+        </div>
+        <button class="mobile-menu-close" onclick="toggleMobileMenu()">
+            <img class="mobile-menu-close-image" src="./images/x.png" alt="close"/>
+        </button>
         <ul class="mobile-menu-link-wrapper">
-            <li><a class="mobile-menu-link" href="#about" onclick="toggleMobileMenu()">About</a></li>
-            <li><a class="mobile-menu-link" href="#benefits" onclick="toggleMobileMenu()">Benefits</a></li>
-            <li><a class="mobile-menu-link" href="#services" onclick="toggleMobileMenu()">Services</a></li>
-            <li><a class="mobile-menu-link" href="#contact" onclick="toggleMobileMenu()">Contact</a></li>
+            <li class="mobile-menu-link-item"><a class="mobile-menu-link" href="#home" 
+                    onclick="toggleMobileMenu()">Home<span class="mobile-menu-arrow">&rsaquo;</span></a></li>
+            <li class="mobile-menu-link-item"><a class="mobile-menu-link" href="#benefits" 
+                    onclick="toggleMobileMenu()">Benefits<span class="mobile-menu-arrow">&rsaquo;</span></a></li>
+            <li class="mobile-menu-link-item"><a class="mobile-menu-link" href="#about"
+                    onclick="toggleMobileMenu()">About<span class="mobile-menu-arrow">&rsaquo;</span></a></li>
+            <li class="mobile-menu-link-item"><a class="mobile-menu-link" href="#services"
+                    onclick="toggleMobileMenu()">Services<span class="mobile-menu-arrow">&rsaquo;</span></a></li>
+            <li class="mobile-menu-link-item"><a class="mobile-menu-link" href="#contact"
+                    onclick="toggleMobileMenu()">Contact<span class="mobile-menu-arrow">&rsaquo;</span></a></li>
         </ul>
-    </div>
+        </div>
   </div>
 <!-- Hero -->
  <section class="hero-section" id="home">
@@ -48,11 +61,11 @@
  </section>
  <!-- Benefits -->
   <section id="benefits">
-    <h2 class="benefits-title">Benefits</h2>
+    <h2 class="section-title">Benefits</h2>
     <div class="benefits-card-wrapper">
         <div class="benefits-card">
             <div class="benefits-card-title-wrapper">
-                <h4 class="benefits-card-title">Accurate and Transparent Financial Records</h4>
+                <h4 class="benefits-card-title">Accurate, Transparent Financial Records</h4>
             </div>
             <ul class="benefits-list">
                 <li class="benefits-list-item">Clean, organized records for a clear view of your business’s financial health.</li>
@@ -94,6 +107,7 @@
   </section>
 <!-- About -->
  <section id="about">
+    <h2 class="section-title">About</h2>
     <div class="about-wrapper">
         <div class="about-column">
             <p class="about-paragraph">"Ajabu" means "amazing" in Swahili, and that’s exactly what we strive to deliver: amazing accounting and
@@ -120,11 +134,58 @@
  </section>
 <!-- Services -->
  <section id="services">
-
+    <h2 class="section-title">Services</h2>
+    <div class="services-card-wrapper">
+        <div class="services-card">
+            <h4 class="services-card-title">Basic</h4>
+            <p class="services-card-subtitle">Bookkeeping</p>
+            <ul class="services-list">
+                <li class="services-list-item">Record and categorize transactions</li>
+                <li class="services-list-item">Reconcile bank and credit card statements</li>
+                <li class="services-list-item">Track income and expenses</li>
+                <li class="services-list-item">Generate monthly financial reports</li>
+            </ul>
+            <h4 class="services-card-price">$300 / mo</h4>    
+        </div>
+        <div class="services-card">
+            <h4 class="services-card-title">Standard</h4>
+            <p class="services-card-subtitle">Bookkeeping & Payroll</p>
+            <ul class="services-list">
+                <li class="services-list-item">Everything in Basic</li>
+                <li class="services-list-item">Process employee payroll on schedule</li>
+                <li class="services-list-item">Calculate and withhold taxes</li>
+                <li class="services-list-item">Manage benefits and deductions</li>
+            </ul>
+            <h4 class="services-card-price">$500 / mo</h4>
+        </div>
+        <div class="services-card">
+            <h4 class="services-card-title">Premium</h4>
+            <p class="services-card-subtitle">Full Accounting Services</p>
+            <ul class="services-list">
+                <li class="services-list-item">Everything in Standard</li>
+                <li class="services-list-item">Maximize deductions with strategic tax planning</li>
+                <li class="services-list-item">Create data-driven budgets to support sustainable growth</li>
+                <li class="services-list-item">Enhance cash flow with targeted analysis and optimization</li>
+            </ul>
+            <h4 class="services-card-price">$900 / mo</h4>
+        </div>
+    </div>
+    <p class="services-disclaimer">*Our service fees may be deductible as a business expense.</p>
+    <div class="services-calendar-link-wrapper">
+        <a class="services-calendar-link">
+            <div class="services-calendar-text-wrapper">
+                <span class="services-calendar-text">Ready for worry-free bookkeeping?</span>
+                <span class="services-calendar-text">Book your free consultation today!</span>
+            </div>
+            <div class="services-calendar-text-wrapper">
+                <span class="services-calendar-chevron">&#187;</span>
+            </div>
+        </a>
+    </div>
  </section>
 <!-- Contact -->
  <section id="contact">
-    <h2 class="contact-title">Contact</h2>
+    <h2 class="section-title">Contact</h2>
     <div class="contact-form-wrapper">
         <form id="contactForm" class="contact-form">
             <div class="input-wrapper">
@@ -148,10 +209,9 @@
 <!-- Footer -->
 <footer class="footer">
     <div class="footer-content">
-        <div class="footer-logo">
-            <span class="icon-fish">🐟</span>
-            <span>Ajabu Accounting</span>
-        </div>
+        <a class="footer-logo-link" href="#home">
+            <img class="footer-logo-icon" src="./images/ajabu-accounting-logo.png" alt="logo" />
+        </a>
         <div class="footer-link-wrapper">
             <a class="footer-link" href="#about">About</a>
             <a class="footer-link" href="#benefits">Benefits</a>

@@ -24,11 +24,10 @@ main {
     justify-content: space-between;
     align-items: center;
     padding: 16px 20px;
-    background-color: #f1f1f1;
-}
-
-.navbar .logo {
-    font-size: 24px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 2;
 }
 
 .nav-logo {
@@ -40,24 +39,10 @@ main {
     display: none;
 }
 
-/* Firefox-specific styles */
-@-moz-document url-prefix() {
-    /* Adjust the button styling here */
-    .menu-icon {
-        line-height: normal;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-}
-
-.navbar .menu-icon {
-    font-size: 24px;
+.menu-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 28px;
-    height: 34px;
     background: transparent;
     border: 1px solid #36485C;
     cursor: pointer;
@@ -66,13 +51,10 @@ main {
     color: #36485C;
 }
 
-.menu-icon span {
-    line-height: 40px; /* Match button height */
-}
-
 .icon-menu {
-    font-size: inherit;
-    line-height: 1;
+    height: 28px;
+    width: auto;
+    padding: 4px 2px;
 }
 
 /* Desktop navbar links */
@@ -103,11 +85,30 @@ main {
 }
 
 @media (max-width: 767.99px) {
+    .navbar {
+        padding: 2.08vw 2.6vw;
+    }
+
     .navbar-content {
         display: flex;
         width: 100%;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .nav-logo {
+        height: 2.6vw;
+        width: 2.6vw;
+    }
+
+    .menu-icon {
+        border: .13vw solid #36485C;
+        border-radius: .52vw;
+    }
+
+    .icon-menu {
+        height: 3.65vw;
+        padding: .52vw .26vw;
     }
 }
 
@@ -130,6 +131,47 @@ main {
     display: flex;
 }
 
+.mobile-menu-background {
+    background: #fff;
+    width: 300px;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+}
+
+.mobile-menu-title-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 8px 0;    
+}
+
+.mobile-menu-title {
+    width: 90%;
+    border-bottom: 1px solid #344149;
+    text-align: center;
+    font-size: 24px;
+    color: #344149;
+}
+
+.mobile-menu-close {
+    background: transparent;
+    border: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 6px 6px 0 0;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.mobile-menu-close-image {
+    height: 18px;
+    width: auto;
+    border: 1px solid #36485C;
+    border-radius: 100%;
+    padding: 3px;
+}
+
 .mobile-menu-link-wrapper {
     list-style: none;
     text-align: center;
@@ -137,11 +179,36 @@ main {
 }
 
 .mobile-menu-link-wrapper li a {
-    color: white;
-    font-size: 24px;
+    color: #344149;
+    font-size: 18px;
     text-decoration: none;
-    padding: 16px;
+    padding: 12px;
     display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.mobile-menu-link-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+    margin-bottom: 8px;
+}
+
+.mobile-menu-arrow {
+    font-size: 22px;
+    font-weight: 900;
+    color: #CCC;
+}
+
+@media (max-width: 767.99px) {
+
 }
 
 /* Home */
@@ -186,19 +253,41 @@ main {
     font-weight: 900;
 }
 
+@media (max-width: 767.99px) {
+    .hero-logo {
+        height: 12.76vw;
+    }
+
+    .hero-title-wrapper {
+        padding: 1.04vw 1.04vw 0 1.04vw;
+    }
+
+    .hero-title {
+        font-size: 5.73vw;
+    }
+}
+
+.section-title {
+    font-size: 38px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px 0;
+    text-align: center;
+}
+
+@media (max-width: 767.99px) {
+    .section-title {
+        font-size: 4.95vw;
+        margin: 2.6vw 0;
+    }
+}
+
 /* Benefits */
 
 #benefits {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.benefits-title {
-    font-size: 38px;
-    font-weight: bold;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 20px 0;
 }
 
 .benefits-card-wrapper {
@@ -241,10 +330,42 @@ main {
 
 .benefits-card ul li {
     margin: 0 12px 8px;
+    font-size: 16px;
 }
 
 .benefits-card ul li:last-child {
     margin-bottom: 0;
+}
+
+@media (max-width: 767.99px) {
+    .benefits-card-wrapper {
+        grid-template-columns: 1fr;
+        padding: calc(5px + 3vw);
+        grid-row-gap: calc(1.5vw);
+    }
+
+    .benefits-card {
+        border-radius: 2.08vw;
+        box-shadow: 0 .78vw 1.56vw rgba(0, 0, 0, 0.15), 
+        0 1.56vw 3.13vw rgba(0, 0, 0, 0.15), 
+        0 2.6vw 5.21vw rgba(0, 0, 0, 0.1);
+        max-width: auto;
+    }
+
+    .benefits-card ul {
+        padding-inline-start: 2.6vw;
+        padding-bottom: 2.08vw;
+    }
+
+    .benefits-card-title {
+        margin: .78vw .78vw 2.34vw;
+        font-size: 3.13vw;
+    }
+
+    .benefits-card ul li {
+        margin: 0 1.56vw 1.04vw;
+        font-size: 2.08vw;
+    }
 }
 
 /* About */
@@ -258,17 +379,11 @@ main {
 
 .about-wrapper {
     display: grid;
-    grid-template-columns: 70% 30%;
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px; 
-    padding: 10px 20px; 
-}
-
-.about-paragraph {
-    width: 90%;
-    font-size: 20px;
-    text-indent: 16px;
+    grid-template-columns: 2fr 1fr;
+    padding: 10px 20px;
+    align-items: center;
+    justify-items: center;
+    gap: 20px;
 }
 
 .about-column {
@@ -276,6 +391,15 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 90%;
+}
+
+.about-paragraph {
+    width: 100%;
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: center;
+    text-indent: 0;
 }
 
 .about-self-wrapper {
@@ -284,10 +408,11 @@ main {
 }
 
 .self {
-    height: 340px;
+    max-height: 100%;
     width: auto;
+    max-width: 340px;
+    height: auto;
 }
-
 .badge-wrapper {
     display: flex;
     flex-direction: row;
@@ -295,6 +420,7 @@ main {
     background: radial-gradient(circle, rgba(110,110,110,1) 0%, rgba(52,65,73,1) 75%, rgba(52,65,73,1) 100%);
     width: 80%;
     border-radius: 16px;
+    margin: 38px 0;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15), 
                 0px 12px 24px rgba(0, 0, 0, 0.15), 
                 0px 20px 40px rgba(0, 0, 0, 0.1);
@@ -305,17 +431,150 @@ main {
     margin: 4px 18px;
 }
 
+@media (max-width: 767.99px) {
+    .about-wrapper {
+        padding: 1.3vw 2.6vw;
+        gap: 2.6vw;
+    }
+
+    .about-paragraph {
+        font-size: 2.4vw;
+    }
+
+    .self {
+        max-width: 40vw;
+    }
+
+    .badge-wrapper {
+        border-radius: 2.08vw;
+        margin: 4.95vw 0;
+        box-shadow: 0 .78vw 1.56vw rgba(0, 0, 0, 0.15), 
+        0 1.56vw 24px rgba(0, 0, 0, 0.15), 
+        0px 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .badge {
+        height: 16.14vw;
+        margin: .52vw 2.34vw;
+    }
+}
+
+/* Service */
+
+#services {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.services-card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Automatically adjusts the number of columns based on screen size */
+    gap: 20px; /* Adds space between cards */
+    padding: 20px; 
+}
+
+.services-card {
+    background: #fff;
+    border: 2px solid #36485C;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.1); /* Enhanced box shadow for paper effect */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 20px;
+}
+
+
+.services-card ul li {
+    margin: 0 12px 8px;
+    font-size: 16px;
+}
+
+.services-card ul li:last-child {
+    margin-bottom: 0;
+}
+
+.services-card-title {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.services-card-subtitle {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.services-list {
+    margin: 12px 0;
+}
+
+.services-card-price {
+    margin-top: auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    font-size: 2em;
+    text-align: center;
+}
+
+.services-disclaimer {
+    text-align: center;
+}
+
+.services-calendar-link-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 24px 0 0;
+}
+
+.services-calendar-link {
+    display: flex;
+    flex-direction: row;
+    background: darkorange;
+    max-width: 540px;
+    color: #fff;
+    border-radius: 64px;
+    cursor: pointer;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15), 
+    0px 12px 24px rgba(0, 0, 0, 0.15), 
+    0px 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.services-calendar-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 12px;
+    padding: 6px 0 6px 14px;
+}
+
+.services-calendar-text:first-of-type {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.services-calendar-text:last-of-type {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.services-calendar-chevron {
+    font-size: 28px;
+    font-weight: bold;
+}
+
 /* Contact */
 
 #contact {
     padding: 24px 20px;
-}
-
-.contact-title {
-    text-align: center;
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 8px;
+    margin-bottom: 24px;
 }
 
 .contact-form-wrapper {
@@ -434,16 +693,27 @@ main {
 
 /* Footer styles */
 .footer {
-    padding: 40px;
+    padding: 32px;
     text-align: center;
     background-color: #f1f1f1;
+}
+
+.footer-logo-link {
+    height: 48px;
+    width: auto;
+    cursor: pointer;
+}
+
+.footer-logo-icon {
+    height: inherit;
+    width: auto;
 }
 
 .footer .footer-link-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
-    margin-top: 40px;
+    margin-top: 24px;
 }
 
 .footer-link {
@@ -452,7 +722,7 @@ main {
 }
 
 .footer .footer-bottom {
-    margin-top: 40px;
+    margin-top: 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
