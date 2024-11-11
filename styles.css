@@ -207,10 +207,6 @@ main {
     color: #CCC;
 }
 
-@media (max-width: 767.99px) {
-
-}
-
 /* Home */
 
 .hero-image {
@@ -238,7 +234,7 @@ main {
 
 .hero-logo {
     height: 90px;
-    width: max-content;
+    width: auto;
 }
 
 .hero-title-wrapper {
@@ -249,7 +245,7 @@ main {
 .hero-title {
     text-align: center;
     font-size: 48px;
-    font-family: fantasy;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 900;
 }
 
@@ -277,8 +273,8 @@ main {
 
 @media (max-width: 767.99px) {
     .section-title {
-        font-size: 4.95vw;
-        margin: 2.6vw 0;
+        font-size: 2em;
+        margin: .6em 0;
     }
 }
 
@@ -339,43 +335,14 @@ main {
 
 @media (max-width: 767.99px) {
     .benefits-card-wrapper {
-        grid-template-columns: 1fr;
-        padding: calc(5px + 3vw);
-        grid-row-gap: calc(1.5vw);
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Automatically adjusts the number of columns based on screen size */
+        gap: 20px;
+        padding: 20px; 
     }
 
-    .benefits-card {
-        border-radius: 2.08vw;
-        box-shadow: 0 .78vw 1.56vw rgba(0, 0, 0, 0.15), 
-        0 1.56vw 3.13vw rgba(0, 0, 0, 0.15), 
-        0 2.6vw 5.21vw rgba(0, 0, 0, 0.1);
-        max-width: auto;
-    }
-
-    .benefits-card ul {
-        padding-inline-start: 2.6vw;
-        padding-bottom: 2.08vw;
-    }
-
-    .benefits-card-title {
-        margin: .78vw .78vw 2.34vw;
-        font-size: 3.13vw;
-    }
-
-    .benefits-card ul li {
-        margin: 0 1.56vw 1.04vw;
-        font-size: 2.08vw;
-    }
 }
 
 /* About */
-
-#about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
 .about-wrapper {
     display: grid;
@@ -412,8 +379,15 @@ main {
     width: auto;
     max-width: 340px;
     height: auto;
+    object-fit: contain;
 }
+
 .badge-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.badge-banner {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -433,19 +407,39 @@ main {
 
 @media (max-width: 767.99px) {
     .about-wrapper {
-        padding: 1.3vw 2.6vw;
-        gap: 2.6vw;
+        grid-template-columns: 1fr; /* Switch to one column */
+        grid-template-rows: auto auto; /* Set rows for each item */
+        grid-template-areas:
+            "about-self-wrapper"
+            "about-column"; /* Reverse the order */
+    }
+    
+    .about-column {
+        grid-area: about-column;
     }
 
-    .about-paragraph {
-        font-size: 2.4vw;
+    .about-self-wrapper {
+        grid-area: about-self-wrapper;
+        position: relative;
+        width: 320px;
+        height: 264px;
+        overflow: hidden;
     }
 
     .self {
-        max-width: 40vw;
+        position: absolute;
+        top: 0; /* Aligns image to the top of the wrapper */
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* Ensures the image scales to fill the width */
+        object-position: top; /* Crops to show only the top portion */
     }
 
-    .badge-wrapper {
+    .about-paragraph {
+        font-size: 1.2em;
+    }
+
+    .badge-banner {
         border-radius: 2.08vw;
         margin: 4.95vw 0;
         box-shadow: 0 .78vw 1.56vw rgba(0, 0, 0, 0.15), 
@@ -471,7 +465,7 @@ main {
 .services-card-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Automatically adjusts the number of columns based on screen size */
-    gap: 20px; /* Adds space between cards */
+    gap: 20px;
     padding: 20px; 
 }
 

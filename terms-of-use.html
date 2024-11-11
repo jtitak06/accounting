@@ -7,12 +7,11 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
 <!-- Navbar -->
 <nav class="navbar">
     <div class="navbar-content">
         <a href="#home" class="logo">
-            <span class="icon-fish">🐟</span>
+            <img class="nav-logo" src="./images/favicon.png" alt="nav-logo" />
         </a>
         <div class="nav-link-wrapper">
             <a class="nav-link" href="#about">About</a>
@@ -25,17 +24,28 @@
         </button>
     </div>
 </nav>
-
   <!-- Mobile Menu Overlay -->
   <div class="mobile-menu-overlay" id="mobileMenuOverlay">
     <div class="mobile-menu-background">
+        <div class="mobile-menu-title-wrapper">
+            <h3 class="mobile-menu-title">Menu</h3>
+        </div>
+        <button class="mobile-menu-close" onclick="toggleMobileMenu()">
+            <img class="mobile-menu-close-image" src="./images/x.png" alt="close"/>
+        </button>
         <ul class="mobile-menu-link-wrapper">
-            <li><a class="mobile-menu-link" href="#about" onclick="toggleMobileMenu()">About</a></li>
-            <li><a class="mobile-menu-link" href="#benefits" onclick="toggleMobileMenu()">Benefits</a></li>
-            <li><a class="mobile-menu-link" href="#services" onclick="toggleMobileMenu()">Services</a></li>
-            <li><a class="mobile-menu-link" href="#contact" onclick="toggleMobileMenu()">Contact</a></li>
+            <li class="mobile-menu-link-item"><a class="mobile-menu-link" href="#home" 
+                    onclick="toggleMobileMenu()">Home<span class="mobile-menu-arrow">&rsaquo;</span></a></li>
+            <li class="mobile-menu-link-item"><a class="mobile-menu-link" href="#benefits" 
+                    onclick="toggleMobileMenu()">Benefits<span class="mobile-menu-arrow">&rsaquo;</span></a></li>
+            <li class="mobile-menu-link-item"><a class="mobile-menu-link" href="#about"
+                    onclick="toggleMobileMenu()">About<span class="mobile-menu-arrow">&rsaquo;</span></a></li>
+            <li class="mobile-menu-link-item"><a class="mobile-menu-link" href="#services"
+                    onclick="toggleMobileMenu()">Services<span class="mobile-menu-arrow">&rsaquo;</span></a></li>
+            <li class="mobile-menu-link-item"><a class="mobile-menu-link" href="#contact"
+                    onclick="toggleMobileMenu()">Contact<span class="mobile-menu-arrow">&rsaquo;</span></a></li>
         </ul>
-    </div>
+        </div>
   </div>
   <main class="privacy-policy">
     <h1 class="privacy-policy__title">Terms of Use</h1>
@@ -117,14 +127,12 @@
         <p class="privacy-policy__contact-info">Website: https://www.ajabuaccounting.com</p>
     </section>
 </main>
-
 <!-- Footer -->
 <footer class="footer">
     <div class="footer-content">
-        <div class="footer-logo">
-            <span class="icon-fish">🐟</span>
-            <span>Ajabu Accounting</span>
-        </div>
+        <a class="footer-logo-link" href="#home">
+            <img class="footer-logo-icon" src="./images/ajabu-accounting-logo.png" alt="logo" />
+        </a>
         <div class="footer-link-wrapper">
             <a class="footer-link" href="#about">About</a>
             <a class="footer-link" href="#benefits">Benefits</a>
@@ -149,7 +157,6 @@
         </div>
     </div>
 </footer>
-
 <script src="script.js"></script>
 </body>
 </html>
