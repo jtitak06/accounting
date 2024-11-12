@@ -85,30 +85,11 @@ main {
 }
 
 @media (max-width: 767.99px) {
-    .navbar {
-        padding: 2.08vw 2.6vw;
-    }
-
     .navbar-content {
         display: flex;
         width: 100%;
         justify-content: space-between;
         align-items: center;
-    }
-
-    .nav-logo {
-        height: 2.6vw;
-        width: 2.6vw;
-    }
-
-    .menu-icon {
-        border: .13vw solid #36485C;
-        border-radius: .52vw;
-    }
-
-    .icon-menu {
-        height: 3.65vw;
-        padding: .52vw .26vw;
     }
 }
 
@@ -137,6 +118,7 @@ main {
     height: 100vh;
     position: absolute;
     left: 0;
+    top: 0;
 }
 
 .mobile-menu-title-wrapper {
@@ -224,11 +206,13 @@ main {
     color: #fff;
     padding: 0 20px;
     position: relative;
+    height: 70vh;
 }
 
 @media (min-width: 1024px){
     .hero-image {
         aspect-ratio: 2.5;
+        height: auto;
     }
 }
 
@@ -250,16 +234,26 @@ main {
 }
 
 @media (max-width: 767.99px) {
+    .hero-title {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 479px) {
+    .hero-image {
+        height: 50vh;
+    }
+    
     .hero-logo {
-        height: 12.76vw;
+        height: 78px;
     }
 
     .hero-title-wrapper {
-        padding: 1.04vw 1.04vw 0 1.04vw;
+        padding: 2px 2px 0 2px;
     }
 
     .hero-title {
-        font-size: 5.73vw;
+        font-size: calc(6vw + 6px);
     }
 }
 
@@ -344,6 +338,11 @@ main {
 
 /* About */
 
+.about-div {
+    display: flex;
+    justify-content: center;
+}
+
 .about-wrapper {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -359,6 +358,8 @@ main {
     justify-content: center;
     align-items: center;
     max-width: 90%;
+    height: 100%;
+    width: 380px;
 }
 
 .about-paragraph {
@@ -399,6 +400,7 @@ main {
                 0px 12px 24px rgba(0, 0, 0, 0.15), 
                 0px 20px 40px rgba(0, 0, 0, 0.1);
 }
+
 .badge {
     height: 124px;
     width: auto;
@@ -416,6 +418,7 @@ main {
     
     .about-column {
         grid-area: about-column;
+        width: auto;
     }
 
     .about-self-wrapper {
@@ -428,11 +431,11 @@ main {
 
     .self {
         position: absolute;
-        top: 0; /* Aligns image to the top of the wrapper */
+        top: 0;
         width: 100%;
         height: auto;
-        object-fit: cover; /* Ensures the image scales to fill the width */
-        object-position: top; /* Crops to show only the top portion */
+        object-fit: cover;
+        object-position: top;
     }
 
     .about-paragraph {
@@ -440,16 +443,14 @@ main {
     }
 
     .badge-banner {
-        border-radius: 2.08vw;
-        margin: 4.95vw 0;
-        box-shadow: 0 .78vw 1.56vw rgba(0, 0, 0, 0.15), 
-        0 1.56vw 24px rgba(0, 0, 0, 0.15), 
-        0px 20px 40px rgba(0, 0, 0, 0.1);
+        box-shadow: none;
+        background: transparent;
+        margin: 12px 0;
     }
 
     .badge {
-        height: 16.14vw;
-        margin: .52vw 2.34vw;
+        height: calc(10vw + 60px);
+        margin: calc(2px + 0.5vw) calc(5px + 1.5vw);
     }
 }
 
@@ -518,6 +519,7 @@ main {
 
 .services-disclaimer {
     text-align: center;
+    font-size: 16px;
 }
 
 .services-calendar-link-wrapper {
@@ -547,6 +549,7 @@ main {
     align-items: center;
     margin: 0 12px;
     padding: 6px 0 6px 14px;
+    text-align: center;
 }
 
 .services-calendar-text:first-of-type {
@@ -562,6 +565,31 @@ main {
 .services-calendar-chevron {
     font-size: 28px;
     font-weight: bold;
+}
+
+@media (max-width: 767.99px) {
+    .services-calendar-link {
+        width: auto;
+        padding: calc(2px + .2vw) calc(2px + 1vw);
+        border-radius: calc(32px + 2vw);
+        max-width: 90%;
+    }
+
+    .services-calendar-text-wrapper {
+        padding: 2px;
+    }
+
+    .services-calendar-text:first-of-type {
+        font-size: calc(14px + 1vw);
+    }
+
+    .services-calendar-text:last-of-type {
+        font-size: calc(10px + 1vw);
+    }
+
+    .services-calendar-chevron {
+        font-size: calc(24px + 1vw);
+    }
 }
 
 /* Contact */
@@ -585,6 +613,12 @@ main {
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15), 
     0px 12px 24px rgba(0, 0, 0, 0.15), 
     0px 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 479px) {
+    .contact-form {
+        width: 100%;
+    }
 }
 
 .input-wrapper {
@@ -634,6 +668,10 @@ main {
     cursor: pointer;
 }
 
+.thank-you-text {
+    font-size: 16px;
+}
+
 /* Privacy Policy and Terms of Use */
 .privacy-policy {
     max-width: 1200px;
@@ -646,7 +684,7 @@ main {
     text-align: center;
     color: #333;
     font-size: 2rem;
-    margin-bottom: 20px;
+    margin: 24px 0;
 }
 
 .privacy-policy__intro {
@@ -720,6 +758,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 12px;
 }
 
 .footer .social-icons a {

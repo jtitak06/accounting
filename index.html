@@ -11,14 +11,14 @@
 <!-- Navbar -->
 <nav class="navbar">
     <div class="navbar-content">
-        <a href="#home" class="logo">
+        <a href="./#home" class="logo">
             <img class="nav-logo" src="./images/favicon.png" alt="nav-logo" />
         </a>
         <div class="nav-link-wrapper">
-            <a class="nav-link" href="#about">About</a>
-            <a class="nav-link" href="#benefits">Benefits</a>
-            <a class="nav-link" href="#services">Services</a>
-            <a class="nav-link" href="#contact">Contact</a>
+            <a class="nav-link" href="./#benefits">Benefits</a>
+            <a class="nav-link" href="./#about">About</a>
+            <a class="nav-link" href="./#services">Services</a>
+            <a class="nav-link" href="./#contact">Contact</a>
         </div>
         <button id="menu-button" class="menu-icon" aria-label="Toggle menu" onclick="toggleMobileMenu()">
             <img class="icon-menu" src="./images/hamburger-menu.png" alt="hamburger-menu" />
@@ -107,22 +107,24 @@
 <!-- About -->
  <section id="about">
     <h2 class="section-title">About</h2>
-    <div class="about-wrapper">
-        <div class="about-column">
-            <p class="about-paragraph">"Ajabu" means "amazing" in Swahili, and that’s exactly what we strive to deliver: amazing accounting and
-                bookkeeping services. With transparent pricing and open communication, we’re dedicated to easing your
-                financial stress so you can focus on growing your business with confidence.
-                <p />
-                <br />
-            <p class="about-paragraph">Our founder, Jeff Titak CFP®, is a serial entrepreneur and passionate about enriching business owners with
-                reduced
-                financial stress and a clearer vision for optimal growth. As a Quickbooks certified bookkeeper and
-                accountant, I pride
-                myself on the quality of work and knowledge to be an invaluable resource for the businesses that I partner
-                with.</p>
-        </div>
-        <div class="about-self-wrapper">
-            <img class="self" src="./images/ledge.png" alt="jeff" />
+    <div class="about-div">
+        <div class="about-wrapper">
+            <div class="about-column">
+                <p class="about-paragraph">"Ajabu" means "amazing" in Swahili, and that’s exactly what we strive to deliver: amazing accounting and
+                    bookkeeping services. With transparent pricing and open communication, we’re dedicated to easing your
+                    financial stress so you can focus on growing your business with confidence.
+                    <p />
+                    <br />
+                <p class="about-paragraph">Our founder, Jeff Titak CFP®, is a serial entrepreneur and passionate about enriching business owners with
+                    reduced
+                    financial stress and a clearer vision for optimal growth. As a Quickbooks certified bookkeeper and
+                    accountant, I pride
+                    myself on the quality of work and knowledge to be an invaluable resource for the businesses that I partner
+                    with.</p>
+            </div>
+            <div class="about-self-wrapper">
+                <img class="self" src="./images/ledge.png" alt="jeff" />
+            </div>
         </div>
     </div>
     <div class="badge-wrapper">
@@ -171,7 +173,7 @@
             <h4 class="services-card-price">$900 / mo</h4>
         </div>
     </div>
-    <p class="services-disclaimer">*Our service fees may be deductible as a business expense.</p>
+    <p class="services-disclaimer">*Service fees may be deductible as business expense.</p>
     <div class="services-calendar-link-wrapper">
         <a class="services-calendar-link">
             <div class="services-calendar-text-wrapper">
@@ -205,24 +207,27 @@
                 <button class="contact-button" type="submit">Submit</button>
             </div>
         </form>
+        <div id="thank-you-message" style="display: none;">
+            <p class="thank-you-text">Thank you for contacting us! We will be in contact soon.</p>
+        </div>
     </div>
  </section>
 <!-- Footer -->
 <footer class="footer">
     <div class="footer-content">
-        <a class="footer-logo-link" href="#home">
+        <a class="footer-logo-link" href="./#home">
             <img class="footer-logo-icon" src="./images/ajabu-accounting-logo.png" alt="logo" />
         </a>
         <div class="footer-link-wrapper">
-            <div><a class="footer-link" href="#about">About</a></div>
-            <div><a class="footer-link" href="#benefits">Benefits</a></div>
-            <div><a class="footer-link" href="#services">Services</a></div>
-            <div><a class="footer-link" href="#contact">Contact</a></div>
+            <div><a class="footer-link" href="./#benefits">Benefits</a></div>
+            <div><a class="footer-link" href="./#about">About</a></div>
+            <div><a class="footer-link" href="./#services">Services</a></div>
+            <div><a class="footer-link" href="./#contact">Contact</a></div>
             <div><a class="footer-link" href="./privacy-policy.html">Privacy Policy</a></div>
             <div><a class="footer-link" href="./terms-of-use.html">Terms of Use</a></div>
         </div>
         <div class="footer-bottom">
-            <p>© Copyright 2025. Ajabu Accounting. All rights reserved.</p>
+            <p>© Copyright 2024. Ajabu Accounting. All rights reserved.</p>
             <div class="social-icons">
                 <a href="https://www.facebook.com" target="_blank">
                     <img class="social-icon-logo" src="./images/facebook-logo.png" alt="facebook" />
@@ -241,7 +246,7 @@
 <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script type="text/javascript">
     (function(){
-        emailjs.init("U6tApi-QiEBFxwAZ2"); // Replace with your actual User ID
+        emailjs.init("U6tApi-QiEBFxwAZ2");
     })();
 </script>
 </body>
