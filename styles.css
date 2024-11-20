@@ -223,7 +223,7 @@ main {
 
 .hero-title-wrapper {
     background: rgba(0, 0, 0, 0.3);
-    padding: 8px 8px 0 8px;
+    padding: 0 6px;
 }
 
 .hero-title {
@@ -520,6 +520,7 @@ main {
 .services-disclaimer {
     text-align: center;
     font-size: 16px;
+    padding: 0 20px;
 }
 
 .services-calendar-link-wrapper {
