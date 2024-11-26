@@ -533,6 +533,7 @@ main {
 .services-calendar-link {
     display: flex;
     flex-direction: row;
+    text-decoration: none;
     background: darkorange;
     max-width: 540px;
     color: #fff;
@@ -774,4 +775,30 @@ main {
 .social-icon-logo {
     height: 16px;
     width: 16px;
+}
+
+/* Calendar */
+
+.calendar-logo-wrapper {
+    margin: 42px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.calendar-subtitle {
+    font-size: 24px;
+    text-align: center;
+}
+
+.calendar-embed {
+    padding: 0 24px;
+    border-radius: 16px;
+}
+
+@media (max-width: 773.99px) {
+    .calendar-subtitle {
+        margin-bottom: 12px;
+        font-size: 1.4em;
+        padding: 0 20px;
+    }
 }
