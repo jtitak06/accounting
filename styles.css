@@ -652,6 +652,42 @@ main {
     height: 120px;
 }
 
+.contact-disclaimer-wrapper {
+    display: flex;
+    flex-direction: row;
+    padding: 6px 0;
+}
+
+.contact-disclaimer-checkbox {
+    margin-right: 4px;
+}
+
+.contact-disclaimer-text {
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+}
+
+.contact-link-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 8px 0;
+}
+
+.contact-link {
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.contact-link-text {
+    color: #fff;
+    font-size: 12px;
+    margin: 0 4px;
+}
+
 .contact-button-wrapper {
     display: flex;
     justify-content: center;
