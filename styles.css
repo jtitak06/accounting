@@ -192,7 +192,7 @@ main {
 /* Home */
 
 .hero-image {
-    background-image: url('./images/hero-image.jpg');
+    background-image: url('./images/hero-image.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
