@@ -392,19 +392,18 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background: radial-gradient(circle, rgba(110,110,110,1) 0%, rgba(52,65,73,1) 75%, rgba(52,65,73,1) 100%);
+    align-items: center;
     width: 80%;
-    border-radius: 16px;
     margin: 38px 0;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15), 
-                0px 12px 24px rgba(0, 0, 0, 0.15), 
-                0px 20px 40px rgba(0, 0, 0, 0.1);
+    height: 124px;
+    overflow: hidden;
 }
 
-.badge {
-    height: 124px;
+.badge-image {
+    max-height: 100%;
     width: auto;
     margin: 4px 18px;
+    object-fit: contain;
 }
 
 @media (max-width: 767.99px) {
@@ -443,12 +442,16 @@ main {
     }
 
     .badge-banner {
-        box-shadow: none;
-        background: transparent;
-        margin: 12px 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+        grid-template-rows: repeat(2, auto);  /* Two rows */
+        gap: 10px; /* Adjust spacing between items */
+        justify-content: center;
+        place-items: center;
+        height: auto; /* Allow flexible height */
     }
 
-    .badge {
+    .badge-image {
         height: calc(10vw + 60px);
         margin: calc(2px + 0.5vw) calc(5px + 1.5vw);
     }
@@ -515,6 +518,8 @@ main {
     font-style: italic;
     font-size: 2em;
     text-align: center;
+    display: none;
+    visibility: hidden;
 }
 
 .services-disclaimer {
