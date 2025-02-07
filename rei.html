@@ -87,14 +87,14 @@
  <section id="contact">
     <h2 class="section-title">Get Started</h2>
     <div class="contact-form-wrapper">
-        <form id="getStarted" class="contact-form" method="POST">
+        <form id="getStarted" class="contact-form">
             <div class="input-wrapper">
                 <label class="label" for="name">Name</label>
-                <input required class="contact-input" type="text" id="name" name="from_name" placeholder="Enter name here..." class="border-gray-600"/>
+                <input required class="contact-input" type="text" id="name" name="name" placeholder="Enter name here..." />
             </div>
             <div class="input-wrapper">
                 <label class="label" for="email">E-mail</label>
-                <input required class="contact-input" type="email" id="email" name="from_email" placeholder="Enter e-mail here..." />
+                <input required class="contact-input" type="email" id="email" name="email" placeholder="Enter e-mail here..." />
             </div>
             <div class="input-wrapper">
                 <label class="label" for="phone">Phone</label>
@@ -110,9 +110,9 @@
                 <a href="./terms-of-service.html" class="contact-link">Terms of Service</a>
             </div>
             <div class="contact-button-wrapper">
-                <a href="./calendar.html" id="submit-link" class="contact-button">Get Started &#187;</a>
+                <button class="contact-button" id="submit-button" type="button">Get Started &#187;</button>
             </div>
-        </form>
+        </form>                                                
         <div id="thank-you-message" style="display: none;">
             <p class="thank-you-text">Thank you for completing the first step! Let's get started with helping you achieve success!</p>
         </div>
@@ -145,35 +145,6 @@
     </div>
 </footer>
 <script src="script.js"></script>
-<script>
-    document.getElementById('submit-link').addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent the default <a> tag behavior
-
-        var form = document.querySelector('#getStarted');
-        var formData = new FormData(form);
-
-        // Send form data to backend (UseBasin or your own server)
-        fetch('https://usebasin.com/f/542cad0a0c29', {
-            method: 'POST',
-            body: formData,
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Form submission failed');
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log('Form submitted successfully:', data);
-
-            // After form submission, redirect to the calendar page
-            window.location.href = "./calendar.html"; // Redirect to the calendar page
-        })
-        .catch(error => {
-            console.error('Error submitting form:', error);
-        });
-    });
-</script>
 <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script type="text/javascript">
     (function(){

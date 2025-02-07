@@ -50,3 +50,36 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     });
 });
 
+document.getElementById('submit-button').addEventListener('click', async function(event) {
+    event.preventDefault();  // Prevent the default form submission
+
+    var form = document.getElementById('getStarted');
+    var formData = new FormData(form);
+
+    // Prepare the data to be sent in JSON format
+    var formDataJSON = {};
+    formData.forEach((value, key) => {
+        formDataJSON[key] = value;
+    });
+
+    try {
+        // Send the data to the SheetDB API
+        const response = await fetch('https://sheetdb.io/api/v1/zslbufpfze95p', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formDataJSON)
+        });
+
+        if (response.ok) {
+            // If submission is successful, redirect to the calendar page
+            window.location.href = './calendar.html';  // Redirect to the calendar page
+        } else {
+            throw new Error('Form submission failed');
+        }
+    } catch (error) {
+        console.error('Error submitting form:', error);
+        alert('There was an issue with your submission. Please try again later.');
+    }
+});
