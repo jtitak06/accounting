@@ -1,22 +1,28 @@
-/* Reset basic styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-body {
-    background-color: #f1f1f1;
+  }
+  
+  body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #f1f1f1;
     color: #36485C;
-}
-
-main {
-    flex: 1;
-}
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+  }
+  
+  main {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  footer {
+    flex-shrink: 0;
+  }
 
 /* Navbar styles */
 .navbar {
@@ -821,6 +827,10 @@ main {
 
 /* Calendar */
 
+.calendar {
+    margin: 0 12px;
+}
+
 .calendar-logo-wrapper {
     margin: 42px 0;
     display: flex;
@@ -843,6 +853,58 @@ main {
         font-size: 1.4em;
         padding: 0 20px;
     }
+}
+
+/* Thank You Page */
+
+@media (max-width: 499.99px) {
+    .section-title.thank-you {
+        font-size: 1.5em;
+        margin: .6em;
+    }
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.thank-you-button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 24px;
+}
+
+.thank-you-button {
+    border-radius: 18px;
+    border: none;
+    background: #508C0F;
+    font-size: 16px;
+    padding: 0;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.thank-you-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 24px;
+    text-align: center;
+    line-height: 1.5;
 }
 
 /* REI Landing Page */

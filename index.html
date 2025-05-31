@@ -1,269 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7G5XQZSDT7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-7G5XQZSDT7');
+    </script>
+      <!-- Google Ads tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17095276217"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17095276217');
+  </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Bookkeeping services, Virtual bookkeeper, Chicago bookkeeper, Small business bookkeeper, Small business accounting, Tax preparation, Payroll management, Financial reporting, Cash flow management, Accurate financial records, Affordable accounting, Business tax services, Indiana bookkeeping, Ajabu Accounting, amazing bookkeeping, amazing accounting, QuickBooks integration, QuickBooks ProAdvisor, QuickBooks ProAdvisor near me, Business expense tracking, Tax deductions for businesses">
-    <meta name="description" content="Ajabu Accounting delivers amazing bookkeeping and accounting services with transparent pricing and open communication. Led by Jeff Titak CFP®, a QuickBooks ProAdvisor, we provide accurate financial records, enhanced cash flow management, informed decision-making support, and stress-free growth readiness for businesses." />
+    <meta name="keywords"
+        content="Bookkeeping services, Virtual bookkeeper, Chicago bookkeeper, Small business bookkeeper, Small business accounting, Tax preparation, Payroll management, Financial reporting, Cash flow management, Accurate financial records, Affordable accounting, Business tax services, Indiana bookkeeping, Ajabu Accounting, amazing bookkeeping, amazing accounting, QuickBooks integration, QuickBooks ProAdvisor, QuickBooks ProAdvisor near me, Business expense tracking, Tax deductions for businesses">
+    <meta name="description"
+        content="Ajabu Accounting delivers amazing bookkeeping and accounting services with transparent pricing and open communication. Led by Jeff Titak CFP®, a QuickBooks ProAdvisor, we provide accurate financial records, enhanced cash flow management, informed decision-making support, and stress-free growth readiness for businesses." />
     <title>Ajabu Accounting</title>
     <link rel="icon" href="./images/favicon.png" type="image/png">
     <link rel="preload" as="image" href="./images/hero-image.webp" type="image/webp">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<!-- Navbar -->
-<nav class="navbar">
-    <div class="navbar-content">
-        <a href="./#home" class="logo">
-            <img class="nav-logo" src="./images/favicon.png" alt="nav-logo" />
-        </a>
-        <div class="nav-link-wrapper">
-            <a class="nav-link" href="./#benefits">Benefits</a>
-            <a class="nav-link" href="./#about">About</a>
-            <a class="nav-link" href="./#services">Services</a>
-            <a class="nav-link" href="./#contact">Contact</a>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="./#home" class="logo">
+                <img class="nav-logo" src="./images/favicon.png" alt="nav-logo" />
+            </a>
+            <div class="nav-link-wrapper">
+                <a class="nav-link" href="./#benefits">Benefits</a>
+                <a class="nav-link" href="./#about">About</a>
+                <a class="nav-link" href="./#services">Services</a>
+                <a class="nav-link" href="./#contact">Contact</a>
+            </div>
+            <button id="menu-button" class="menu-icon" aria-label="Toggle menu" onclick="toggleMobileMenu()">
+                <img class="icon-menu" src="./images/hamburger-menu.png" alt="hamburger-menu" />
+            </button>
         </div>
-        <button id="menu-button" class="menu-icon" aria-label="Toggle menu" onclick="toggleMobileMenu()">
-            <img class="icon-menu" src="./images/hamburger-menu.png" alt="hamburger-menu" />
-        </button>
-    </div>
-</nav>
+    </nav>
 
-  <!-- Mobile Menu Overlay -->
-  <div class="mobile-menu-overlay" id="mobileMenuOverlay">
-    <div class="mobile-menu-background">
-        <div class="mobile-menu-title-wrapper">
-            <h3 class="mobile-menu-title">Menu</h3>
-        </div>
-        <button class="mobile-menu-close" onclick="toggleMobileMenu()">
-            <img class="mobile-menu-close-image" src="./images/x.png" alt="close"/>
-        </button>
-        <ul class="mobile-menu-link-wrapper">
-            <li class="mobile-menu-link-item"><a class="mobile-menu-link" href="#home" 
-                    onclick="toggleMobileMenu()">Home<span class="mobile-menu-arrow">&rsaquo;</span></a></li>
-            <li class="mobile-menu-link-item"><a class="mobile-menu-link" href="#benefits" 
-                    onclick="toggleMobileMenu()">Benefits<span class="mobile-menu-arrow">&rsaquo;</span></a></li>
-            <li class="mobile-menu-link-item"><a class="mobile-menu-link" href="#about"
-                    onclick="toggleMobileMenu()">About<span class="mobile-menu-arrow">&rsaquo;</span></a></li>
-            <li class="mobile-menu-link-item"><a class="mobile-menu-link" href="#services"
-                    onclick="toggleMobileMenu()">Services<span class="mobile-menu-arrow">&rsaquo;</span></a></li>
-            <li class="mobile-menu-link-item"><a class="mobile-menu-link" href="#contact"
-                    onclick="toggleMobileMenu()">Contact<span class="mobile-menu-arrow">&rsaquo;</span></a></li>
-        </ul>
-        </div>
-  </div>
-<!-- Hero -->
- <section class="hero-section" id="home">
-    <div class="hero-image">
-        <img class="hero-logo" src="./images/ajabu-accounting-logo.png" alt="logo" />
-        <div class="hero-title-wrapper">
-            <h1 class="hero-title">Simplify Your Finances, <br />Focus on Growth</h1>
-        </div>
-    </div>
- </section>
- <!-- Benefits -->
-  <section id="benefits">
-    <h2 class="section-title">Benefits</h2>
-    <div class="benefits-card-wrapper">
-        <div class="benefits-card">
-            <div class="benefits-card-title-wrapper">
-                <h4 class="benefits-card-title">Accurate, Transparent Financial Records</h4>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu-background">
+            <div class="mobile-menu-title-wrapper">
+                <h3 class="mobile-menu-title">Menu</h3>
             </div>
-            <ul class="benefits-list">
-                <li class="benefits-list-item">Clean, organized records for a clear view of your business’s financial health.</li>
-                <li class="benefits-list-item">Transparent reporting, making it easier to understand financial performance.</li>
-                <li class="benefits-list-item">Simplifies tax preparation with accurate documentation, reducing potential errors.</li>
-            </ul>
-        </div>
-        <div class="benefits-card">
-            <div class="benefits-card-title-wrapper">
-                <h4 class="benefits-card-title">Enhanced Cash Flow Management</h4>
-            </div>
-            <ul class="benefits-list">
-                <li class="benefits-list-item">Monitors cash inflow and outflow to avoid shortages and support timely payments.</li>
-                <li class="benefits-list-item">Proactive cash flow forecasting, helping you plan for future growth and investments.</li>
-                <li class="benefits-list-item">Assists in setting realistic budgets to maintain financial stability and meet business goals.</li>
-            </ul>
-        </div>
-        <div class="benefits-card">
-            <div class="benefits-card-title-wrapper">
-                <h4 class="benefits-card-title">Informed Decision-Making Support</h4>
-            </div>
-            <ul class="benefits-list">
-                <li class="benefits-list-item">Data-driven insights that support confident business decisions.</li>
-                <li class="benefits-list-item">Clear metrics for evaluating business performance, expenses, and profitability.</li>
-                <li class="benefits-list-item">Strategic planning by forecasting based on reliable financial data.</li>
-            </ul>
-        </div>
-        <div class="benefits-card">
-            <div class="benefits-card-title-wrapper">
-                <h4 class="benefits-card-title">Stress Reduction and Growth Readiness</h4>
-            </div>
-            <ul class="benefits-list">
-                <li class="benefits-list-item">Eases the burden of financial management, freeing up time to focus on core business tasks.</li>
-                <li class="benefits-list-item">Ensures compliance with financial regulations, reducing legal and tax risks.</li>
-                <li class="benefits-list-item">Scalable financial processes that grow with your business, enabling smooth expansion.</li>
+            <button class="mobile-menu-close" onclick="toggleMobileMenu()">
+                <img class="mobile-menu-close-image" src="./images/x.png" alt="close" />
+            </button>
+            <ul class="mobile-menu-link-wrapper">
+                <li class="mobile-menu-link-item"><a class="mobile-menu-link" href="#home"
+                        onclick="toggleMobileMenu()">Home<span class="mobile-menu-arrow">&rsaquo;</span></a></li>
+                <li class="mobile-menu-link-item"><a class="mobile-menu-link" href="#benefits"
+                        onclick="toggleMobileMenu()">Benefits<span class="mobile-menu-arrow">&rsaquo;</span></a></li>
+                <li class="mobile-menu-link-item"><a class="mobile-menu-link" href="#about"
+                        onclick="toggleMobileMenu()">About<span class="mobile-menu-arrow">&rsaquo;</span></a></li>
+                <li class="mobile-menu-link-item"><a class="mobile-menu-link" href="#services"
+                        onclick="toggleMobileMenu()">Services<span class="mobile-menu-arrow">&rsaquo;</span></a></li>
+                <li class="mobile-menu-link-item"><a class="mobile-menu-link" href="#contact"
+                        onclick="toggleMobileMenu()">Contact<span class="mobile-menu-arrow">&rsaquo;</span></a></li>
             </ul>
         </div>
     </div>
-  </section>
-<!-- About -->
- <section id="about">
-    <h2 class="section-title">About</h2>
-    <div class="about-div">
-        <div class="about-wrapper">
-            <div class="about-column">
-                <p class="about-paragraph">"Ajabu" means "amazing" in Swahili, and that’s exactly what we strive to deliver: amazing accounting and
-                    bookkeeping services. With transparent pricing and open communication, we’re dedicated to easing your
-                    financial stress so you can focus on growing your business with confidence.
-                    <p />
-                    <br />
-                <p class="about-paragraph">Our founder, Jeff Titak CFP®, is a serial entrepreneur and passionate about enriching business owners with
-                    reduced
-                    financial stress and a clearer vision for optimal growth. As a Quickbooks ProAdvisor, I pride
-                    myself on the quality of work and knowledge to be an invaluable resource for the businesses that I partner
-                    with.</p>
-            </div>
-            <div class="about-self-wrapper">
-                <img class="self" src="./images/ledge.png" alt="jeff" />
+    <!-- Hero -->
+    <section class="hero-section" id="home">
+        <div class="hero-image">
+            <img class="hero-logo" src="./images/ajabu-accounting-logo.png" alt="logo" />
+            <div class="hero-title-wrapper">
+                <h1 class="hero-title">Simplify Your Finances, <br />Focus on Growth</h1>
             </div>
         </div>
-    </div>
-    <div class="badge-wrapper">
-        <div class="badge-banner">
-            <img class="badge-image" src="./images/intuit-bookkeeping-certification.png" alt="badge" />
-            <img class="badge-image" src="./images/level-one-badge.png" alt="badge" />
-            <img class="badge-image" src="./images/intuit-academy-tax-exam-level-1.1.png" alt="badge" />
-            <img class="badge-image" src="./images/intuit-academy-tax-preparation-training.png" alt="badge" />
-        </div>
-    </div>
- </section>
-<!-- Services -->
- <section id="services">
-    <h2 class="section-title">Services</h2>
-    <div class="services-card-wrapper">
-        <div class="services-card">
-            <h4 class="services-card-title">Basic</h4>
-            <p class="services-card-subtitle">Bookkeeping</p>
-            <ul class="services-list">
-                <li class="services-list-item">Record and categorize transactions</li>
-                <li class="services-list-item">Reconcile bank and credit card statements</li>
-                <li class="services-list-item">Track income and expenses</li>
-                <li class="services-list-item">Generate monthly financial reports</li>
-            </ul>
-            <h4 class="services-card-price">$300 / mo</h4>    
-        </div>
-        <div class="services-card">
-            <h4 class="services-card-title">Standard</h4>
-            <p class="services-card-subtitle">Bookkeeping & Payroll</p>
-            <ul class="services-list">
-                <li class="services-list-item">Everything in Basic</li>
-                <li class="services-list-item">Process employee payroll on schedule</li>
-                <li class="services-list-item">Calculate and withhold taxes</li>
-                <li class="services-list-item">Manage benefits and deductions</li>
-            </ul>
-            <h4 class="services-card-price">$500 / mo</h4>
-        </div>
-        <div class="services-card">
-            <h4 class="services-card-title">Premium</h4>
-            <p class="services-card-subtitle">Full Accounting Services</p>
-            <ul class="services-list">
-                <li class="services-list-item">Everything in Standard</li>
-                <li class="services-list-item">Maximize deductions with strategic tax planning</li>
-                <li class="services-list-item">Create data-driven budgets to support sustainable growth</li>
-                <li class="services-list-item">Enhance cash flow with targeted analysis and optimization</li>
-            </ul>
-            <h4 class="services-card-price">$900 / mo</h4>
-        </div>
-    </div>
-    <p class="services-disclaimer">*Service fees may be deductible as business expense.</p>
-    <div class="services-calendar-link-wrapper">
-        <a class="services-calendar-link" href="./calendar.html">
-            <div class="services-calendar-text-wrapper">
-                <span class="services-calendar-text">Ready for worry-free bookkeeping?</span>
-                <span class="services-calendar-text">Book your free consultation today!</span>
+    </section>
+    <!-- Benefits -->
+    <section id="benefits">
+        <h2 class="section-title">Benefits</h2>
+        <div class="benefits-card-wrapper">
+            <div class="benefits-card">
+                <div class="benefits-card-title-wrapper">
+                    <h4 class="benefits-card-title">Accurate, Transparent Financial Records</h4>
+                </div>
+                <ul class="benefits-list">
+                    <li class="benefits-list-item">Clean, organized records for a clear view of your business’s
+                        financial health.</li>
+                    <li class="benefits-list-item">Transparent reporting, making it easier to understand financial
+                        performance.</li>
+                    <li class="benefits-list-item">Simplifies tax preparation with accurate documentation, reducing
+                        potential errors.</li>
+                </ul>
             </div>
-            <div class="services-calendar-text-wrapper">
-                <span class="services-calendar-chevron">&#187;</span>
+            <div class="benefits-card">
+                <div class="benefits-card-title-wrapper">
+                    <h4 class="benefits-card-title">Enhanced Cash Flow Management</h4>
+                </div>
+                <ul class="benefits-list">
+                    <li class="benefits-list-item">Monitors cash inflow and outflow to avoid shortages and support
+                        timely payments.</li>
+                    <li class="benefits-list-item">Proactive cash flow forecasting, helping you plan for future growth
+                        and investments.</li>
+                    <li class="benefits-list-item">Assists in setting realistic budgets to maintain financial stability
+                        and meet business goals.</li>
+                </ul>
             </div>
-        </a>
-    </div>
- </section>
-<!-- Contact -->
- <section id="contact">
-    <h2 class="section-title">Contact</h2>
-    <div class="contact-form-wrapper">
-        <form id="contactForm" class="contact-form" action="https://usebasin.com/f/542cad0a0c29" method="POST">
-            <div class="input-wrapper">
-                <label class="label" for="name">Name</label>
-                <input required class="contact-input" type="text" id="name" name="from_name" placeholder="Enter name here..." class="border-gray-600"/>
+            <div class="benefits-card">
+                <div class="benefits-card-title-wrapper">
+                    <h4 class="benefits-card-title">Informed Decision-Making Support</h4>
+                </div>
+                <ul class="benefits-list">
+                    <li class="benefits-list-item">Data-driven insights that support confident business decisions.</li>
+                    <li class="benefits-list-item">Clear metrics for evaluating business performance, expenses, and
+                        profitability.</li>
+                    <li class="benefits-list-item">Strategic planning by forecasting based on reliable financial data.
+                    </li>
+                </ul>
             </div>
-            <div class="input-wrapper">
-                <label class="label" for="email">E-mail</label>
-                <input required class="contact-input" type="email" id="email" name="from_email" placeholder="Enter e-mail here..." />
-            </div>
-            <div class="input-wrapper">
-                <label class="label" for="phone">Phone</label>
-                <input required class="contact-input" type="tel" id="phone" name="phone" placeholder="Enter phone number here..." maxlength="14" />
-            </div>
-            <div class="input-wrapper">
-                <label class="label" for="message">Message</label>
-                <textarea required class="contact-textarea" id="message" name="message" placeholder="Type your message here..."></textarea>
-            </div>
-            <div class="contact-disclaimer-wrapper">
-                <input required class="contact-disclaimer-checkbox" type="checkbox" />
-                <p class="contact-disclaimer-text">I agree to receive marketing messages from Ajabu Accounting at the phone number provided above. You can reply STOP to opt out.</p>
-            </div>
-            <div class="contact-link-wrapper">
-                <a href="./privacy-policy.html" class="contact-link">Privacy Policy</a>
-                <p class="contact-link-text">|</p>
-                <a href="./terms-of-service.html" class="contact-link">Terms of Service</a>
-            </div>
-            <div class="contact-button-wrapper">
-                <button class="contact-button" type="submit">Submit</button>
-            </div>
-        </form>
-        <div id="thank-you-message" style="display: none;">
-            <p class="thank-you-text">Thank you for contacting us! We will be in contact soon.</p>
-        </div>
-    </div>
- </section>
-<!-- Footer -->
-<footer class="footer">
-    <div class="footer-content">
-        <a class="footer-logo-link" href="./#home">
-            <img class="footer-logo-icon" src="./images/ajabu-accounting-logo.png" alt="logo" />
-        </a>
-        <div class="footer-link-wrapper">
-            <div><a class="footer-link" href="./#benefits">Benefits</a></div>
-            <div><a class="footer-link" href="./#about">About</a></div>
-            <div><a class="footer-link" href="./#services">Services</a></div>
-            <div><a class="footer-link" href="./#contact">Contact</a></div>
-            <div><a class="footer-link" href="./privacy-policy.html">Privacy Policy</a></div>
-            <div><a class="footer-link" href="./terms-of-service.html">Terms of Service</a></div>
-        </div>
-        <div class="footer-bottom">
-            <p>© Copyright 2025. Ajabu Accounting. All rights reserved.</p>
-            <div class="social-icons">
-                <a href="https://www.facebook.com/ajabuaccounting" target="_blank">
-                    <img class="social-icon-logo" src="./images/facebook-logo.png" alt="facebook" />
-                </a>
-                <a href="https://www.tiktok.com/@ajabuaccounting" target="_blank">
-                    <img class="social-icon-logo" src="./images/tiktok-logo.png" alt="tiktok" />
-                </a>
-                <a href="https://www.linkedin.com/company/ajabu-accounting/" target="_blank">
-                    <img class="social-icon-logo" src="./images/linkedin-logo.png" alt="linkedin" />
-                </a>
+            <div class="benefits-card">
+                <div class="benefits-card-title-wrapper">
+                    <h4 class="benefits-card-title">Stress Reduction and Growth Readiness</h4>
+                </div>
+                <ul class="benefits-list">
+                    <li class="benefits-list-item">Eases the burden of financial management, freeing up time to focus on
+                        core business tasks.</li>
+                    <li class="benefits-list-item">Ensures compliance with financial regulations, reducing legal and tax
+                        risks.</li>
+                    <li class="benefits-list-item">Scalable financial processes that grow with your business, enabling
+                        smooth expansion.</li>
+                </ul>
             </div>
         </div>
-    </div>
-</footer>
-<script src="script.js"></script>
-<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script type="text/javascript">
-    (function(){
-        emailjs.init("U6tApi-QiEBFxwAZ2");
-    })();
-</script>
+    </section>
+    <!-- About -->
+    <section id="about">
+        <h2 class="section-title">About</h2>
+        <div class="about-div">
+            <div class="about-wrapper">
+                <div class="about-column">
+                    <p class="about-paragraph">"Ajabu" means "amazing" in Swahili, and that’s exactly what we strive to
+                        deliver: amazing accounting and
+                        bookkeeping services. With transparent pricing and open communication, we’re dedicated to easing
+                        your
+                        financial stress so you can focus on growing your business with confidence.
+                        <p />
+                        <br />
+                    <p class="about-paragraph">Our founder, Jeff Titak CFP®, is a serial entrepreneur and passionate
+                        about enriching business owners with
+                        reduced
+                        financial stress and a clearer vision for optimal growth. As a Quickbooks ProAdvisor, I pride
+                        myself on the quality of work and knowledge to be an invaluable resource for the businesses that
+                        I partner
+                        with.</p>
+                </div>
+                <div class="about-self-wrapper">
+                    <img class="self" src="./images/ledge.png" alt="jeff" />
+                </div>
+            </div>
+        </div>
+        <div class="badge-wrapper">
+            <div class="badge-banner">
+                <img class="badge-image" src="./images/intuit-bookkeeping-certification.png" alt="badge" />
+                <img class="badge-image" src="./images/level-one-badge.png" alt="badge" />
+                <img class="badge-image" src="./images/intuit-academy-tax-exam-level-1.1.png" alt="badge" />
+                <img class="badge-image" src="./images/intuit-academy-tax-preparation-training.png" alt="badge" />
+            </div>
+        </div>
+    </section>
+    <!-- Services -->
+    <section id="services">
+        <h2 class="section-title">Services</h2>
+        <div class="services-card-wrapper">
+            <div class="services-card">
+                <h4 class="services-card-title">Basic</h4>
+                <p class="services-card-subtitle">Bookkeeping</p>
+                <ul class="services-list">
+                    <li class="services-list-item">Record and categorize transactions</li>
+                    <li class="services-list-item">Reconcile bank and credit card statements</li>
+                    <li class="services-list-item">Track income and expenses</li>
+                    <li class="services-list-item">Generate monthly financial reports</li>
+                </ul>
+                <h4 class="services-card-price">$300 / mo</h4>
+            </div>
+            <div class="services-card">
+                <h4 class="services-card-title">Standard</h4>
+                <p class="services-card-subtitle">Bookkeeping & Payroll</p>
+                <ul class="services-list">
+                    <li class="services-list-item">Everything in Basic</li>
+                    <li class="services-list-item">Process employee payroll on schedule</li>
+                    <li class="services-list-item">Calculate and withhold taxes</li>
+                    <li class="services-list-item">Manage benefits and deductions</li>
+                </ul>
+                <h4 class="services-card-price">$500 / mo</h4>
+            </div>
+            <div class="services-card">
+                <h4 class="services-card-title">Premium</h4>
+                <p class="services-card-subtitle">Full Accounting Services</p>
+                <ul class="services-list">
+                    <li class="services-list-item">Everything in Standard</li>
+                    <li class="services-list-item">Maximize deductions with strategic tax planning</li>
+                    <li class="services-list-item">Create data-driven budgets to support sustainable growth</li>
+                    <li class="services-list-item">Enhance cash flow with targeted analysis and optimization</li>
+                </ul>
+                <h4 class="services-card-price">$900 / mo</h4>
+            </div>
+        </div>
+        <p class="services-disclaimer">*Service fees may be deductible as business expense.</p>
+        <div class="services-calendar-link-wrapper">
+            <a class="services-calendar-link" href="./calendar.html">
+                <div class="services-calendar-text-wrapper">
+                    <span class="services-calendar-text">Ready for worry-free bookkeeping?</span>
+                    <span class="services-calendar-text">Book your free consultation today!</span>
+                </div>
+                <div class="services-calendar-text-wrapper">
+                    <span class="services-calendar-chevron">&#187;</span>
+                </div>
+            </a>
+        </div>
+    </section>
+    <!-- Contact -->
+    <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-form-wrapper">
+            <form id="contactForm" class="contact-form" action="https://usebasin.com/f/542cad0a0c29" method="POST">
+                <div class="input-wrapper">
+                    <label class="label" for="name">Name</label>
+                    <input required class="contact-input" type="text" id="name" name="from_name"
+                        placeholder="Enter name here..." class="border-gray-600" />
+                </div>
+                <div class="input-wrapper">
+                    <label class="label" for="email">E-mail</label>
+                    <input required class="contact-input" type="email" id="email" name="from_email"
+                        placeholder="Enter e-mail here..." />
+                </div>
+                <div class="input-wrapper">
+                    <label class="label" for="phone">Phone</label>
+                    <input required class="contact-input" type="tel" id="phone" name="phone"
+                        placeholder="Enter phone number here..." maxlength="14" />
+                </div>
+                <div class="input-wrapper">
+                    <label class="label" for="message">Message</label>
+                    <textarea required class="contact-textarea" id="message" name="message"
+                        placeholder="Type your message here..."></textarea>
+                </div>
+                <div class="contact-disclaimer-wrapper">
+                    <input required class="contact-disclaimer-checkbox" type="checkbox" />
+                    <p class="contact-disclaimer-text">I agree to receive marketing messages from Ajabu Accounting at
+                        the phone number provided above. You can reply STOP to opt out.</p>
+                </div>
+                <div class="contact-link-wrapper">
+                    <a href="./privacy-policy.html" class="contact-link">Privacy Policy</a>
+                    <p class="contact-link-text">|</p>
+                    <a href="./terms-of-service.html" class="contact-link">Terms of Service</a>
+                </div>
+                <div class="contact-button-wrapper">
+                    <button class="contact-button" type="submit">Submit</button>
+                </div>
+            </form>
+            <div id="thank-you-message" style="display: none;">
+                <p class="thank-you-text">Thank you for contacting us! We will be in contact soon.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <a class="footer-logo-link" href="./#home">
+                <img class="footer-logo-icon" src="./images/ajabu-accounting-logo.png" alt="logo" />
+            </a>
+            <div class="footer-link-wrapper">
+                <div><a class="footer-link" href="./#benefits">Benefits</a></div>
+                <div><a class="footer-link" href="./#about">About</a></div>
+                <div><a class="footer-link" href="./#services">Services</a></div>
+                <div><a class="footer-link" href="./#contact">Contact</a></div>
+                <div><a class="footer-link" href="./privacy-policy.html">Privacy Policy</a></div>
+                <div><a class="footer-link" href="./terms-of-service.html">Terms of Service</a></div>
+            </div>
+            <div class="footer-bottom">
+                <p>© Copyright 2025. Ajabu Accounting. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/ajabuaccounting" target="_blank">
+                        <img class="social-icon-logo" src="./images/facebook-logo.png" alt="facebook" />
+                    </a>
+                    <a href="https://www.tiktok.com/@ajabuaccounting" target="_blank">
+                        <img class="social-icon-logo" src="./images/tiktok-logo.png" alt="tiktok" />
+                    </a>
+                    <a href="https://www.linkedin.com/company/ajabu-accounting/" target="_blank">
+                        <img class="social-icon-logo" src="./images/linkedin-logo.png" alt="linkedin" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("U6tApi-QiEBFxwAZ2");
+        })();
+    </script>
 </body>
+
 </html>
